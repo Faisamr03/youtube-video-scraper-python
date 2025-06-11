@@ -104,6 +104,12 @@ if __name__ == "__main__":
             print(f"\n✅ Sukses! Data telah disimpan ke dalam file: {OUTPUT_CSV_FILE}")
         except Exception as e:
             print(f"\n❌ Gagal menyimpan file CSV. Error: {e}")
+        
+        #Hitung Total Views untuk tiap video#
+        total_views = sum(video['view_count'] for video in videos)
+        #cetak hasil hitung total penonton#
+        print(f"\💡 Total Views untuk semua video: {total_views}")
+
 
     else:
         print("\nTidak ada video yang ditemukan atau terjadi error.")
